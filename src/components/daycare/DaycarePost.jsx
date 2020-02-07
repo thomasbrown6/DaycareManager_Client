@@ -36,11 +36,8 @@ const DaycarePost = ({ daycare }) => {
               <Typography variant='subtitle1' color='textSecondary'>
                 {daycare.location}
               </Typography>
-              <Typography variant='subtitle1' paragraph>
+              <Typography variant='subtitle1' color='primary' paragraph>
                 Classrooms: {daycare.classrooms.length}
-              </Typography>
-              <Typography variant='subtitle1' color='primary'>
-                Edit...
               </Typography>
             </CardContent>
           </div>

@@ -129,6 +129,7 @@ const Dashboard = ({
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth='lg' className={classes.container}>
+          <DashboardActions />
           <h1 className='medium center'>{daycare.company}</h1>
           <Grid container spacing={3}>
             {/* Chart */}
@@ -144,9 +145,11 @@ const Dashboard = ({
             </Grid>
             {/* Students */}
             <Grid item xs={12}>
-              <Paper className={classes.paper}>
-                <Students classrooms={daycare.classrooms} />
-              </Paper>
+              {daycare.classrooms.count > 0 && (
+                <Paper className={classes.paper}>
+                  <Students classrooms={daycare.classrooms} />
+                </Paper>
+              )}
             </Grid>
           </Grid>
           <Box pt={4}>

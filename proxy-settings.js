@@ -1,14 +1,14 @@
 module.exports = {
   // run react-dev-server (true) or serve build (false)
-  dev: true,
+  dev: false,
   // whether to open the react site in a browser at start
   openInBrowser: true,
   // path to your own backend api
   // (set to empty string if yo don't have an internal JS-based api)
-  pathToAPI: './api/index',
-  // the host for your backend api 
-  // set to another machine if your api is not local  
-  hostForAPI: 'localhost',
+  pathToAPI: '',
+  // the host for your backend api
+  // set to another machine if your api is not local
+  hostForAPI: 'http://daycaremanagerserver.azurewebsites.net/',
   // the ports
   ports: {
     // where you want to run the 'joint' proxied server
@@ -20,7 +20,7 @@ module.exports = {
   },
   // a path to an optional script to run after builds
   postBuildScript: './postBuildScript.js',
-  // a function that should return true if the backend-api 
+  // a function that should return true if the backend-api
   // is to handle the request (add your own logic here as needed)
   handleWithAPI(url) {
     return url.indexOf('/api/') === 0;

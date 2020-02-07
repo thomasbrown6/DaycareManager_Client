@@ -498,7 +498,8 @@ button {
 }
 
 .profile-exp h2,
-.profile-edu h2 {
+.profile-edu h2,
+.dashboardactions {
   margin-bottom: 1rem;
 }
 
